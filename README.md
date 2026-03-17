@@ -3,7 +3,7 @@
 ## 🚨 The Situation
 
 You asked an AI to build a simple "Number Guessing Game" using Streamlit.
-It wrote the code, ran away, and now the game is unplayable. 
+It wrote the code, ran away, and now the game is unplayable.
 
 - You can't win.
 - The hints lie to you.
@@ -29,9 +29,23 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
+### Game Purpose
+
+This project is a simple number guessing game built with Streamlit. The goal is for the player to guess a secret number using Higher and Lower hints from the app.
+
+### Bugs Found
+
+When I first ran the game, the attempts counter was broken and could start at 0. I also noticed that the hints were inconsistent, and the secret number did not stay stable between guesses. The score could also become negative, which made the game feel unfair.
+
+### Fixes Applied
+
+I fixed the state bug by using `st.session_state` so the secret number, score, attempts, and history would not reset on every interaction. I corrected the Higher/Lower logic and moved the main game logic into `logic_utils.py`. I also ran pytest and fixed the code until all tests passed.
+
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+![Winning game screenshot](Winnning_game_glitch.png)
+
 
 ## 🚀 Stretch Features
 
